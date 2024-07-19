@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.css">
 </head>
 
-<body class="vh-100 d-flex flex-column bg-dark text-light">
+<body class="vh-100 d-flex flex-column bg-black text-light">
 
     <header>
 
-        <nav class="navbar navbar-expand-lg bg-dark text-light" data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg bg-black text-light" data-bs-theme="dark">
             <div class="container-fluid">
-                <img src="./assets/img/netflix_logo.png" class="navbar-brand img-fluid" width="120px"
-                    alt="netflix logo">
+                <img src="./assets/img/netflix_logo.png" class="navbar-brand img-fluid" width="120px" alt="netflix logo"
+                    style="z-index: 9999;">
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -44,7 +44,7 @@
                         </li>
                     </ul>
 
-                    <div class="navbar navbar-expand-lg bg-dark text-light">
+                    <div class="navbar navbar-expand-lg bg-black text-light">
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <i class="text-light bi bi-search nav-link "></i>
@@ -62,7 +62,7 @@
                                         (¬‿¬)
                                     </span>
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-end bg-dark-subtle">
+                                <ul class="dropdown-menu dropdown-menu-end bg-black-subtle">
                                     <li>
                                         <a class="dropdown-item" href="#">Settings</a>
                                     </li>
@@ -70,7 +70,8 @@
                                         <hr class="dropdown-divider">
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="./profile.html">
+                                        <a class="dropdown-item" href="./profile.html" data-bs-toggle="modal"
+                                            data-bs-target="#profileModal">
                                             <i class="text-secondary bi bi-person-fill"></i>
                                             Profile
                                         </a>
@@ -102,7 +103,7 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Genres
                         </button>
-                        <ul class="dropdown-menu bg-dark-subtle">
+                        <ul class="dropdown-menu bg-black-subtle">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Thriller</a></li>
                             <li><a class="dropdown-item" href="#">Comedy</a></li>
@@ -334,7 +335,7 @@
 
     </main>
 
-    <footer class="bg-dark text-secondary">
+    <footer class="bg-black text-secondary">
         <section class="container px-4 my-3">
             <div class="row row-cols-1 g-3">
 
@@ -393,6 +394,79 @@
 
         </section>
     </footer>
+
+
+    <!-- Modal -->
+    <div class="modal fade bg-black" id="profileModal" tabindex="-1" data-bs-backdrop="static"
+        aria-labelledby="profileModalLabel" aria-hidden="false">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-black border-0">
+                <div class="modal-header px-0">
+                    <h1 class="modal-title fs-1" id="profileModalLabel">Edit Profile</h1>
+                </div>
+                <div class="modal-body">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="./assets/img/avatar.png" class="img-fluid" alt="Avatar">
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column align-items-start">
+                                    <p class="bg-secondary p-2 align-self-stretch">
+                                        Strive Student
+                                    </p>
+                                    <label for="lenguages">Lenguage:</label>
+                                    <select class="form-select form-select-lg mb-3" aria-label="Large select">
+                                        <option selected>English</option>
+                                        <option value="1">Italian</option>
+                                        <option value="2">Indian</option>
+                                        <option value="3">Japanese</option>
+                                    </select>
+
+                                    <hr class="border-bottom-1 border-dark-subtle opacity-50 my-2 w-100">
+
+                                    <h5>Maturity Settings:</h5>
+                                    <button type="button" class="btn btn-secondary text-start">ALL MATURITY
+                                        RATINGS</button>
+                                    <p>Show titles of all maturity ratings for this profile.</p>
+                                    <button type="button" class="btn btn-outline-secondary"
+                                        data-bs-dismiss="modal">EDIT</button>
+
+                                    <hr class="border-bottom-1 border-dark-subtle opacity-50 my-4 w-100">
+
+                                    <h5>Autoplay controls</h5>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-black border border-dark" type="checkbox"
+                                            value="" id="firstCheck">
+                                        <label class="form-check-label" for="firstCheck">
+                                            Autoplay next episode in a series on all devices.
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input bg-black border border-dark" type="checkbox"
+                                            value="" id="secondCheck">
+                                        <label class="form-check-label" for="secondCheck">
+                                            Autoplay previes while browsing on all devices.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="d-flex flex-row justify-content-evenly w-100 gap-3">
+                        <button type="button" class="w-100 btn btn-light">SAVE</button>
+                        <button type="button" class="w-100 btn btn-outline-light"
+                            data-bs-dismiss="modal">CANCEL</button>
+                        <button type="button" class="w-100 btn btn-outline-light">DELETE PROFILE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
