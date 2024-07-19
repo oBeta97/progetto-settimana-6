@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix clone</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.css">
+</head>
+
+<body class="vh-100 d-flex flex-column">
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-black text-light" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a href="./index.html" style="z-index: 9999;">
+                    <img src="./assets/img/netflix_logo.png" class="navbar-brand img-fluid" width="120px" alt="netflix logo"
+                    style="z-index: 9999;">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold text-light" href="#">TV Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Recently Added</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">My List</a>
+                        </li>
+                    </ul>
+
+                    <div class="navbar navbar-expand-lg bg-black text-light">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <i class="text-light bi bi-search nav-link "></i>
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link text-light">KIDS</span>
+                            </li>
+                            <li class="nav-item">
+                                <i class="text-light bi bi-bell-fill nav-link"></i>
+                            </li>
+                            <li class="nav-item dropdown ">
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="bg-success px-1 py-3 rounded text-light">
+                                        (¬‿¬)
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end bg-black-subtle">
+                                    <li>
+                                        <a class="dropdown-item" href="./settings.html">Settings</a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="./profile.html" data-bs-toggle="modal"
+                                            data-bs-target="#profileModal">
+                                            <i class="text-secondary bi bi-person-fill"></i>
+                                            Profile
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="flex-grow-1">
+
+        <div class="container">
+
+            <!-- TITLE -->
+            <div class="row border-bottom border-secondary-subtle py-2 my-3">
+                <div class="col-12 col-md-3">
+                    <h1>Account</h1>
+                </div>
+
+                <div class="col">
+
+                </div>
+            </div>
+
+            <!-- MEMBERSHIP & BILLING -->
+            <div class="row border-bottom border-secondary-subtle py-2 my-2">
+                <div class="col-12 col-md-3">
+                    <h6 class="text-secondary">MEMBERSHIP & BILLING</h6>
+                    <button type="button" class="btn bg-secondary-subtle shadow-sm">Cancel Membership</button>
+                </div>
+
+                <div class="col">
+                    <div class="d-flex justify-content-between w-100">
+                        <p class="fw-bold">student@strive.school</p>
+                        <a href="#" class="text-decoration-none text-info">Change account email</a>
+                    </div>
+                    <div class="d-flex justify-content-between w-100">
+                        <p class="text-secondary">password: *******</p>
+                        <a href="#" class="text-decoration-none text-info">Change password</a>
+                    </div>
+                    <div class="d-flex justify-content-between w-100">
+                        <p class="text-secondary">+44 123 4567 890</p>
+                        <a href="#" class="text-decoration-none text-info">Change phone number</a>
+                    </div>
+
+                    <hr />
+
+                    <div class="d-flex justify-content-between w-100">
+                        <p class="text-secondary">
+                            <i class="bi bi-paypal"></i>
+                            admin@strive.school
+                        </p>
+                        <div class="d-flex flex-column text-end">
+                            <a href="#" class="text-decoration-none text-info">Update payment info</a>
+                            <a href="#" class="text-decoration-none text-info">Billing details</a>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="d-flex justify-content-between w-100">
+                        <p class="text-secondary"></p>
+                        <div class="d-flex flex-column text-end">
+                            <a href="#" class="text-decoration-none text-info">Redeem gift card or promo code</a>
+                            <a href="#" class="text-decoration-none text-info">Where to buy gift cards</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PLAN DETAILS -->
+            <div class="row border-bottom border-secondary-subtle py-2 my-2 align-items-center">
+                <div class="col-12 col-md-3">
+                    <h6 class="text-secondary">PLAN DETAILS</h6>
+                </div>
+
+                <div class="col">
+                    <div class="d-flex justify-content-between w-100 ">
+                        <p>
+                            <span class="fw-bold">
+                                Premium
+                            </span>
+                            <span class="btn btn-sm btn-light border-2 border-black px-3">
+                                ULTRA <i class="bi bi-badge-hd-fill m-0"></i>
+                            </span>
+                        </p>
+                        <a href="#" class="text-decoration-none text-info">Change plan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SETTINGS -->
+            <div class="row border-bottom border-secondary-subtle py-2 my-2">
+                <div class="col-12 col-md-3">
+                    <h6 class="text-secondary">SETTINGS</h6>
+                </div>
+
+                <div class="col">
+                    <div class="d-flex justify-content-between w-100">
+                        <a href="#" class="text-decoration-none text-info">Parental controls</a>
+                    </div>
+                    <div class="d-flex justify-content-between w-100">
+                        <a href="#" class="text-decoration-none text-info">Test participation</a>
+                    </div>
+                    <div class="d-flex justify-content-between w-100">
+                        <a href="#" class="text-decoration-none text-info">Manage download devices</a>
+                    </div>
+                    <div class="d-flex justify-content-between w-100">
+                        <a href="#" class="text-decoration-none text-info">active a device</a>
+                    </div>
+                    <div class="d-flex justify-content-between w-100">
+                        <a href="#" class="text-decoration-none text-info">Recent device streaming activity</a>
+                    </div>
+                    <div class="d-flex justify-content-between w-100">
+                        <a href="#" class="text-decoration-none text-info">Sign out of all devices</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MY PROFILE -->
+            <div class="row py-2 mt-2 mb-5">
+                <div class="col-12 col-md-3">
+                    <h6 class="text-secondary">MY PROFILE</h6>
+                </div>
+
+                <div class="col">
+                    <div class="d-flex justify-content-between w-100 mb-2">
+                        <p class="fw-bold">
+                            <span class="bg-success p-1 rounded text-light">
+                                (¬‿¬)
+                            </span>
+                            student@strive.school
+                        </p>
+                        <div class="d-flex flex-column text-end">
+                            <a href="#" class="text-decoration-none text-info">Manage proifiles</a>
+                            <a href="#" class="text-decoration-none text-info">Add profile email</a>
+                        </div>
+                    </div>
+
+
+                    <div class="row row-cols-2">
+                        <a href="#" class="text-decoration-none text-info">Language</a>
+                        <a href="#" class="text-decoration-none text-info">Viev activity</a>
+                    </div>
+                    <div class="row row-cols-2">
+                        <a href="#" class="text-decoration-none text-info">Playback settings</a>
+                        <a href="#" class="text-decoration-none text-info">Ratings</a>
+                    </div>
+
+                    <div class="row row-cols-1">
+                        <a href="#" class="text-decoration-none text-info">Subtitles appeareance</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+        <!-- NO FOOTER HERE! -->
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
