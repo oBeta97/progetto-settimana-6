@@ -1,0 +1,14 @@
+@import "../bootstrap-5.3.3/scss/mixins/banner";
+@include bsBanner("");
+
+@import "../bootstrap-5.3.3/scss/functions";
+@import "../bootstrap-5.3.3/scss/variables";
+
+$border-radius:               0rem;
+$border-radius-sm:            0rem;
+$border-radius-lg:            0rem;
+$border-radius-xl:            0rem;
+$border-radius-xxl:           0rem;
+$border-radius-pill:          0rem;
+
+@import "../bootstrap-5.3.3/scss/bootstrap.scss";
